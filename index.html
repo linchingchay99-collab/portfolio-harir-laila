@@ -21,17 +21,15 @@
   }
 
   html { scroll-behavior: smooth; }
+
   body {
     font-family: 'Inter', sans-serif;
     color: var(--dark);
     background: var(--white);
     cursor: none;
-   
     overflow-x: hidden;
-   
   }
 
-}
   /* CUSTOM CURSOR */
   .cursor {
     width: 12px; height: 12px;
@@ -175,10 +173,27 @@
     transition: all 0.2s;
   }
   .btn-secondary:hover { background: var(--dark); color: #fff; }
-<div class="hero-image">
-  <img src="ll.jpeg" alt="Laila Harir">
-</div>
-  
+
+  /* PHOTO À DROITE DU HERO */
+  .hero-image {
+    position: absolute;
+    top: 50%;
+    right: 6%;
+    transform: translateY(-50%);
+    width: 320px;
+    height: 320px;
+    z-index: 1;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(108,63,196,0.25);
+  }
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
   /* MARQUEE */
   .marquee-section {
     background: var(--dark);
@@ -456,7 +471,7 @@
     section { padding: 4rem 1.5rem; }
     .hero { padding: 6rem 1.5rem 3rem; }
     .hero-bg { display: none; }
-    .hero-stats { position: static; margin-top: 2rem; justify-content: flex-start; }
+    .hero-image { display: none; }
   }
 </style>
 </head>
@@ -505,19 +520,8 @@
     </div>
   </div>
 
-  <div class="hero-stats">
-    <div class="stat">
-      <span class="stat-num">50+</span>
-      <span class="stat-label">Universités partenaires</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">8</span>
-      <span class="stat-label">Langues sur UniBridge</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">3</span>
-      <span class="stat-label">Langues maîtrisées</span>
-    </div>
+  <div class="hero-image">
+    <img src="ll.jpeg" alt="Laila Harir">
   </div>
 </section>
 
@@ -555,7 +559,7 @@
     <!-- UniBridge -->
     <div class="project-card card-violet">
       <div class="project-icon icon-violet">🌉</div>
-      <p class="project-label" style="color: var(--violet);">Startup · EdTech</p>
+      <p class="project-label" style="color: var(--violet);">Projet académique · EdTech</p>
       <h3>UniBridge</h3>
       <p>Plateforme d'accompagnement des étudiants internationaux en France — logement, démarches admin, intégration, carrière. Née de mon propre vécu.</p>
       <div class="project-pills">
@@ -566,7 +570,7 @@
         <span class="pill">WordPress</span>
       </div>
       <div class="project-results">
-        <div class="result-item">50+ universités partenaires en France</div>
+        <div class="result-item">50+ universités partenaires envisagées en France</div>
         <div class="result-item">12 villes couvertes, 8 langues disponibles</div>
         <div class="result-item">Communication multicanale pilotée de A à Z</div>
       </div>
@@ -671,7 +675,7 @@
     <div class="skill-group">
       <p class="skill-group-title"><span class="skill-icon">📊</span> Data & Analyse</p>
       <div class="skill-item">
-        <div class="skill-name-row"><span>Excel avancé</span><span class="skill-level">Expert</span></div>
+        <div class="skill-name-row"><span>Excel</span><span class="skill-level">Expert</span></div>
         <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
       </div>
       <div class="skill-item">
@@ -679,8 +683,8 @@
         <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
       </div>
       <div class="skill-item">
-        <div class="skill-name-row"><span>SPSS</span><span class="skill-level">Avancé</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+        <div class="skill-name-row"><span>SPSS</span><span class="skill-level">Débutante</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:30%"></div></div>
       </div>
       <div class="skill-item">
         <div class="skill-name-row"><span>Google Analytics</span><span class="skill-level">Intermédiaire</span></div>
@@ -713,7 +717,6 @@
   <h3 style="font-family:'Syne',sans-serif; font-size:1.4rem; font-weight:700; margin: 3rem 0 1.5rem;">Langues</h3>
   <div class="langs">
     <div class="lang-card">
-      <div class="lang-flag">🇲🇦</div>
       <p class="lang-name">Arabe</p>
       <p class="lang-level">Langue maternelle</p>
       <div class="lang-dots">
@@ -725,7 +728,6 @@
       </div>
     </div>
     <div class="lang-card">
-      <div class="lang-flag">🇫🇷</div>
       <p class="lang-name">Français</p>
       <p class="lang-level">Bilingue — C1</p>
       <div class="lang-dots">
@@ -737,7 +739,6 @@
       </div>
     </div>
     <div class="lang-card">
-      <div class="lang-flag">🇬🇧</div>
       <p class="lang-name">Anglais</p>
       <p class="lang-level">Bilingue — C1</p>
       <div class="lang-dots">
@@ -781,7 +782,7 @@
   <div class="contact-links">
     <a href="mailto:lailaharir04@gmail.com" class="contact-btn contact-btn-primary">✉ lailaharir04@gmail.com</a>
     <a href="https://linkedin.com/in/laila-harir" class="contact-btn contact-btn-outline" target="_blank">LinkedIn →</a>
-    <a href="https://unibridge.fr" class="contact-btn contact-btn-outline" target="_blank">unibridge.fr →</a>
+    <a href="https://linchingchay99-collab.github.io/UNIBRIDGE/" class="contact-btn contact-btn-outline" target="_blank">UniBridge →</a>
   </div>
 </section>
 
