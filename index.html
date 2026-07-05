@@ -30,7 +30,28 @@
    
     overflow-x: hidden;
   }
+.hero-image {
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  transform: translateY(-50%);
+  width: 320px;
+  height: 320px;
+  z-index: 1;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(108,63,196,0.25);
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
+@media (max-width: 768px) {
+  .hero-image { display: none; }
+}
   /* CUSTOM CURSOR */
   .cursor {
     width: 12px; height: 12px;
