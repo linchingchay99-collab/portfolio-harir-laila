@@ -300,6 +300,21 @@
   }
   .result-item::before { content: '→'; color: var(--violet); font-weight: 700; flex-shrink: 0; }
 
+  /* Bouton lien projet (nouveau) */
+  .project-link-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 1.2rem;
+    padding: 0.6rem 1.3rem;
+    background: var(--violet);
+    color: #fff;
+    font-size: 0.82rem; font-weight: 600;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: none;
+  }
+  .project-link-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(108,63,196,0.3); }
+
   /* EXPÉRIENCES */
   .timeline { position: relative; padding-left: 2rem; }
   .timeline::before {
@@ -574,6 +589,7 @@
         <div class="result-item">12 villes couvertes, 8 langues disponibles</div>
         <div class="result-item">Communication multicanale pilotée de A à Z</div>
       </div>
+      <a href="https://linchingchay99-collab.github.io/UNIBRIDGE/" class="project-link-btn" target="_blank" rel="noopener">Voir le projet →</a>
     </div>
 
     <!-- Étude de marché IA -->
